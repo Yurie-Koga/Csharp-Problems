@@ -15,8 +15,10 @@
 
   <ItemGroup>
     <None Remove="p\" />
+    <None Remove="p %28copy%29\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="p\" />
+    <Folder Include="p %28copy%29\" />
   </ItemGroup>
 </Project>

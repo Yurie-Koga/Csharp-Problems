@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Problems.p
+namespace Problems.p1
 {
     [TestClass]
     public class Test
@@ -17,14 +17,26 @@ namespace Problems.p
         };
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestTwoSum1()
         {
             int i = 0;
             foreach (var testCase in cases)
             {
-                var act = solution.Solution1(testCase.nums, testCase.target);
-                //Assert.AreEqual<int[]>(testCase.expect, act);
-                //CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
+                var act = solution.TwoSum1(testCase.nums, testCase.target);
+                CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
+                i++;
+            }
+        }
+
+
+        [TestMethod]
+        public void TestTwoSum2()
+        {
+            int i = 0;
+            foreach (var testCase in cases)
+            {
+                var act = solution.TwoSum2(testCase.nums, testCase.target);
+                CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
                 i++;
             }
         }
