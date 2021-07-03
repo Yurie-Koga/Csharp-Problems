@@ -17,8 +17,6 @@ namespace Problems.p
             (new int[] { 3, 3 }, 6, new int[] { 0, 1 }),
         };
 
-
-
         [TestMethod]
         public void TestMethod1()
         {
