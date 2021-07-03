@@ -28,7 +28,6 @@ namespace Problems.p1
             }
         }
 
-
         [TestMethod]
         public void TestTwoSum2()
         {
@@ -36,6 +35,18 @@ namespace Problems.p1
             foreach (var testCase in cases)
             {
                 var act = solution.TwoSum2(testCase.nums, testCase.target);
+                CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
+                i++;
+            }
+        }
+
+        [TestMethod]
+        public void TestTwoSum3()
+        {
+            int i = 0;
+            foreach (var testCase in cases)
+            {
+                var act = solution.TwoSum3(testCase.nums, testCase.target);
                 CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
                 i++;
             }
