@@ -51,5 +51,17 @@ namespace Problems.p1
                 i++;
             }
         }
+
+        [TestMethod]
+        public void TestTwoSum5()
+        {
+            int i = 0;
+            foreach (var testCase in cases)
+            {
+                var act = solution.TwoSum5(testCase.nums, testCase.target);
+                CollectionAssert.AreEquivalent(testCase.expect, act, string.Format("\rcase: {0}", i));
+                i++;
+            }
+        }
     }
 }
